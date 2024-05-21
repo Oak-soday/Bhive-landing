@@ -1,6 +1,4 @@
-import {useState, useEffect} from "react";
-
-const useFetch = async (url) => {
+const useFetch = async (url: any) => {
   const fetchImage = async () => {
     try {
       const response = await fetch(`${url}`);

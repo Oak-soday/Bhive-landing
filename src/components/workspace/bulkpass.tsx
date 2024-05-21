@@ -12,7 +12,7 @@ const Bulkpass = (data: {
         <div className="discount">{discountObject.value}% Discount</div>
         <div>
             <label>Bulk Pass</label>
-            <div> <span>₹ {parseFloat(discountPrice)}</span><span className="perDay">/{discountDays} Days</span></div>
+            <div> <span>₹ {discountPrice}</span><span className="perDay">/{discountDays} Days</span></div>
         </div>
         <div>
             <ForwardImg></ForwardImg>

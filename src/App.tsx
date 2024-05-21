@@ -9,7 +9,7 @@ import { addWorkspace } from './features/workstationSlice';
 const Workspace = React.lazy(() => import('./components/workspace/workspace'));
 
 function App() {
-  const state = useSelector((state: { workstation: Object }) => state.workstation);
+  const state = useSelector((state: any) => state.workstation);
   const dispatch = useDispatch();
   const JsonAPi = "https://raw.githubusercontent.com/MujtabaKably/bhive-interview-project-data/main/data.json";
   useEffect(() => {

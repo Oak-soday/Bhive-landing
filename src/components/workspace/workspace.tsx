@@ -1,7 +1,7 @@
 import kmicon from '../../assets/6km.svg';
 const apiUrl = 'https://raw.githubusercontent.com/MujtabaKably/bhive-interview-project-data/main/';
 import './__workspace.scss';
-import useFetch from "../../useFetch";
+//import useFetch from "../../useFetch";
 import Daypass from './daypass';
 import Bulkpass from './bulkpass';
 import Tag from './tag';
