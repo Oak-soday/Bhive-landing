@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import './App.css'
 import Header from './components/header/header';
 import SectionChooseUS from './components/cards/sectioncards';
-import Workspace from './components/workspace/workspace';
 import Appdownload from './components/sectiondownload/appdownload';
 import Herobanner from './components/hero/sectionhero';
 import { useDispatch, useSelector } from 'react-redux';
 import { addWorkspace } from './features/workstationSlice';
+const Workspace = React.lazy(() => import('./components/workspace/workspace'));
 
 function App() {
   const state = useSelector((state: { workstation: Object }) => state.workstation);
@@ -27,7 +27,9 @@ function App() {
       <Header></Header>
       <Herobanner></Herobanner>
       <SectionChooseUS></SectionChooseUS>
-      <Workspace state={state}></Workspace>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Workspace state={state}></Workspace>
+      </Suspense>
       <Appdownload state={state}></Appdownload>
       <footer className='footer'>
         <h6>{state?.footerTitle}</h6>

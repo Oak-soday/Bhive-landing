@@ -21,7 +21,6 @@ export const workstationSlice = createSlice({
   },
 });
 
-// Action creators are generated for each case reducer function
 export const {addWorkspace} = workstationSlice.actions;
 
 export default workstationSlice.reducer;
