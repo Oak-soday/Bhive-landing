@@ -1,0 +1,68 @@
+@import "../../scss/mixins.scss";
+
+.appdownload {
+  margin: 0 5%;
+  .mobilebase {
+    position: absolute;
+    bottom: -8px;
+    left: -50px;
+    z-index: 0;
+    width: -webkit-fill-available;
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  &__title {
+    color: $Gray3;
+    text-align: left;
+    @media only screen and (max-width: 768px) {
+      color: rgba(38, 50, 56, 1);
+    }
+  }
+  &__wrap {
+    display: flex;
+    position: relative;
+    align-items: end;
+    gap: 10%;
+    margin-bottom: 40px;
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      .mobileTab {
+        width: 320px;
+      }
+    }
+    img {
+      z-index: 1;
+    }
+  }
+  &__tag {
+    z-index: 1;
+    text-align: left;
+    h4 {
+      font-size: $h4;
+      margin: 0;
+      color: rgba(96, 95, 95, 1);
+      font-weight: 400;
+      margin-bottom: 40px;
+      max-width: 558px;
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &--images {
+      z-index: 1;
+      display: flex;
+      margin-bottom: 30px;
+      @media only screen and (max-width: 768px) {
+        margin-top: 20px;
+      }
+
+      img {
+        z-index: 1;
+        margin-right: 20px;
+      }
+    }
+  }
+}

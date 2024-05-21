@@ -1,0 +1,105 @@
+@import "../../scss/mixins.scss";
+
+.workspace {
+  margin: 0 5%;
+  margin-bottom: 70px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    h4 {
+      overflow: hidden;
+      text-align: left;
+      margin: 0px;
+    }
+  }
+  &__title {
+    text-align: left;
+  }
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    @media only screen and (max-width: 768px) {
+      justify-content: center;
+    }
+
+    &--card {
+      border: 1px solid $Gray5;
+      border-radius: 8px;
+      width: min-content;
+      padding: 10px;
+      @include box-shadow;
+      .tag {
+        position: absolute;
+      }
+      .mainImg {
+        border-radius: 6px;
+        margin-bottom: 12px;
+        @media only screen and (max-width: 768px) {
+          width: 296px;
+        }
+      }
+      .pass {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        .discount {
+          position: absolute;
+          margin-top: -60px;
+          font-size: 8px;
+          font-weight: 500;
+          width: 69px;
+          text-align: center;
+          line-height: 9.68px;
+          margin-left: 43px;
+          padding: 3px;
+          color: white;
+          background: rgba(38, 50, 56, 1);
+          border: 1px solid rgba(38, 50, 56, 1);
+          border-radius: 3px;
+        }
+        .perDay {
+          font-size: 12px;
+          color: $Main;
+        }
+        label {
+          font-size: 14px;
+          font-weight: 400;
+          color: $Secondary;
+          @media only screen and (max-width: 768px) {
+            font-size: 12px;
+          }
+        }
+        .f3 {
+          opacity: 0.3;
+        }
+        .f2 {
+          opacity: 0.5;
+        }
+        .bulkpass {
+          border: 1px solid $Stroke-Dark-Yellow;
+          border-radius: 6px;
+          padding: 5px;
+          background-color: $Main-Light-Yellow;
+          display: flex;
+          align-items: center;
+          text-align: left;
+          width: 100%;
+          justify-content: space-between;
+        }
+        .daypass {
+          border: 0.5px solid $Stroke-Dark-Grey;
+          border-radius: 6px;
+          background-color: $Main-Light-Grey;
+          padding: 5px;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          justify-content: space-between;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
